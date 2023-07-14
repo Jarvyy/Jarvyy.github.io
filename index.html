@@ -6,7 +6,7 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-image: url('https://picsum.photos/1200/800'); /* Random background image */
+            background-image: url('https://picsum.photos/1200/800'); /* Initial background image */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -111,6 +111,9 @@
                              getRandomElement(part4);
             
             document.getElementById("complement").textContent = compliment;
+            
+            var randomImageSrc = 'https://picsum.photos/1200/800?random=' + Math.random();
+            document.body.style.backgroundImage = 'url(' + randomImageSrc + ')';
         }
     </script>
 </body>
