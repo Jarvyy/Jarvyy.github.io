@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +6,29 @@
         body {
             text-align: center;
             font-family: Arial, sans-serif;
+            background-image: url('https://picsum.photos/1200/800'); /* Random background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        #overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         #complement {
             font-size: 4vw; /* Responsive font size based on viewport width */
             margin-bottom: 3vh; /* Responsive margin based on viewport height */
+            color: white;
         }
         
         #generateButton {
@@ -30,8 +47,10 @@
     </style>
 </head>
 <body>
-    <div id="complement">Click the button to generate a compliment!</div>
-    <button id="generateButton" onclick="generateComplement()">GENERATE A COMPLIMENT</button>
+    <div id="overlay">
+        <div id="complement">Click the button to generate a compliment!</div>
+        <button id="generateButton" onclick="generateComplement()">GENERATE A COMPLIMENT</button>
+    </div>
 
     <script>
         var part1 = [
@@ -96,4 +115,3 @@
     </script>
 </body>
 </html>
-
