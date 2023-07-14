@@ -1,2 +1,0 @@
-# Jarvyy.github.io
-WebProject
