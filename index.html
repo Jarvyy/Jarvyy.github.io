@@ -2,22 +2,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Complement Generator</title>
+    <title>Compliment Generator</title>
     <style>
         body {
             text-align: center;
-            margin-top: 100px;
             font-family: Arial, sans-serif;
         }
         
         #complement {
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 4vw; /* Responsive font size based on viewport width */
+            margin-bottom: 3vh; /* Responsive margin based on viewport height */
         }
         
         #generateButton {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 2vh 5vw; /* Responsive padding based on viewport height and width */
+            font-size: 2vw; /* Responsive font size based on viewport width */
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -31,18 +30,15 @@
     </style>
 </head>
 <body>
-    <div id="complement">Click the button to generate a complement!</div>
-    <button id="generateButton" onclick="generateComplement()">GENERATE A COMPLEMENT</button>
+    <div id="complement">Click the button to generate a compliment!</div>
+    <button id="generateButton" onclick="generateComplement()">GENERATE A COMPLIMENT</button>
 
     <script>
         var part1 = [
             "You are",
-            "You have",
             "Your",
-            "I admire your",
+            "I admire you, you are",
             "Your smile is",
-            "Your kindness is",
-            "Your intelligence is",
             "You possess",
             "Your personality is",
             "Your sense of humor is"
@@ -75,16 +71,13 @@
         ];
         
         var part4 = [
-            "I've ever known.",
-            "in the world.",
-            "to me.",
-            "you possess.",
             "that defines you.",
             "that lights up the room.",
             "that makes a difference.",
             "that brings joy to others.",
             "that inspires those around you.",
-            "that sets you apart."
+            "that sets you apart.",
+            "that makes you amazing."
         ];
         
         function getRandomElement(array) {
@@ -93,12 +86,13 @@
         }
         
         function generateComplement() {
-            var complement = getRandomElement(part1) + " " +
+            var compliment = getRandomElement(part1) + " " +
+                                                     + " an"+
                              getRandomElement(part2) + " " +
                              getRandomElement(part3) + " " +
                              getRandomElement(part4);
             
-            document.getElementById("complement").textContent = complement;
+            document.getElementById("complement").textContent = compliment;
         }
     </script>
 </body>
