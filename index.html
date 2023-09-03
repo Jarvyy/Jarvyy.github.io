@@ -25,12 +25,19 @@
             align-items: center;
         }
         
-        #complement {
+        #compliment {
             font-size: 4vw; /* Responsive font size based on viewport width */
             margin-bottom: 3vh; /* Responsive margin based on viewport height */
             color: white;
             background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the text */
             padding: 10px; /* Add some padding to the text */
+        }
+        #title {
+            font-size: 6vw;
+            margin-bottom: 3vh;
+            color: gold;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
         }
         
         #generateButton {
@@ -50,55 +57,62 @@
 </head>
 <body>
     <div id="overlay">
-        <div id="complement">Click the button to generate a compliment!</div>
-        <button id="generateButton" onclick="generateComplement()">GENERATE A COMPLIMENT</button>
+        <div id="title">V2!</div>
+        <div id="compliment">Click the button to generate a compliment!</div>
+        <button id="generateButton" onclick="generateCompliment()">GENERATE A COMPLIMENT</button>
     </div>
 
     <script>
         var part1 = [
             "You are",
+            "I admire your",
             "Your",
-            "I admire you, you are",
+            "People love your",
             "Your smile is",
+            "I'm grateful for your",
             "You possess",
-            "Your personality is",
-            "Your sense of humor is"
+            "Your presence is",
+            "You have",
+            "I appreciate your"    
         ];
         
         var part2 = [
-            "amazing",
-            "beautiful",
-            "awesome",
-            "brilliant",
-            "captivating",
-            "charming",
-            "exquisite",
-            "fantastic",
-            "gorgeous",
-            "impressive"
+            "kindness",
+            "intelligence",
+            "creativity",
+            "sense of humor",
+            "generosity",
+            "wisdom",
+            "compassion",
+            "charm",
+            "positivity",
+            "uniqueness"
         ];
         
         var part3 = [
-            "person",
-            "soul",
-            "heart",
-            "individual",
-            "being",
-            "human",
-            "friend",
-            "presence",
-            "spirit",
-            "gem"
+            "brightens my day!",
+            "is truly remarkable.",
+            "makes the world a better place.",
+            "is a source of inspiration.",
+            "brings joy to others.",
+            "is a ray of sunshine.",
+            "fills the room with positivity.",
+            "is a true blessing.",
+            "warms my heart.",
+            "radiates beauty inside and out."
         ];
         
         var part4 = [
-            "that defines you.",
-            "that lights up the room.",
-            "that makes a difference.",
-            "that brings joy to others.",
-            "that inspires those around you.",
-            "that sets you apart.",
-            "that makes you amazing."
+            "Keep up the fantastic work!",
+            "You're a shining star!",
+            "You're one in a million!",
+            "You're truly exceptional!",
+            "Don't ever change!",
+            "The world needs more people like you!",
+            "Your impact is immeasurable.",
+            "You're a true gem.",
+            "You're an inspiration to us all.",
+            "Thank you for being you!"
         ];
         
         function getRandomElement(array) {
@@ -106,13 +120,13 @@
             return array[randomIndex];
         }
         
-        function generateComplement() {
-            var compliment = getRandomElement(part1) + " "+" an " +
+        function generateCompliment() {
+            var compliment = getRandomElement(part1) + " " +
                              getRandomElement(part2) + " " +
                              getRandomElement(part3) + " " +
                              getRandomElement(part4);
             
-            document.getElementById("complement").textContent = compliment;
+            document.getElementById("compliment").textContent = compliment;
             
             var randomImageSrc = 'https://picsum.photos/1200/800?random=' + Math.random();
             document.body.style.backgroundImage = 'url(' + randomImageSrc + ')';
